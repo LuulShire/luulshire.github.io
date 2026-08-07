@@ -286,15 +286,47 @@ body::before {
 .about-bio {
   font-size: 19px;
   line-height: 1.75;
-  max-width: 700px;
-  margin: 0 0 12px;
+  max-width: 640px;
+  margin: 0 0 16px;
 }
 
-.about-grid {
+.about-hero-row {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 28px;
+  align-items: start;
+  margin-bottom: 40px;
+}
+.about-bio-col { padding-top: 4px; }
+.about-sprite-col {
+  display: flex;
+  justify-content: center;
+  padding-top: 12px;
+}
+.about-sprite {
+  width: 100%;
+  max-width: 190px;
+  height: auto;
+}
+@media (max-width: 760px) {
+  .about-hero-row { grid-template-columns: 1fr; }
+  .about-sprite-col { display: none; }
+}
+
+.about-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 26px;
-  margin: 44px 0;
+}
+.about-col { display: flex; flex-direction: column; gap: 18px; }
+
+.photo-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+@media (max-width: 760px) {
+  .about-columns { grid-template-columns: 1fr; }
 }
 .about-block {
   border: 4px solid var(--ink);
@@ -328,7 +360,7 @@ body::before {
   transform: translate(-2px,-4px) rotate(-1deg);
   box-shadow: 8px 10px 0 var(--pink-mid);
 }
-.photo-frame img { display: block; width: 100%; height: 190px; object-fit: cover; }
+.photo-frame img { display: block; width: 100%; height: 260px; object-fit: cover; }
 .photo-frame figcaption {
   font-family: var(--font-pixel);
   font-size: 8px;
