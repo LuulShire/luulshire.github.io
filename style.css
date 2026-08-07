@@ -293,24 +293,23 @@ body::before {
 .about-hero-row {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
-  gap: 28px;
+  gap: 24px;
   align-items: start;
   margin-bottom: 40px;
 }
-.about-bio-col { padding-top: 4px; }
-.about-sprite-col {
+.about-pet-col {
   display: flex;
   justify-content: center;
-  padding-top: 12px;
+  padding-top: 20px;
 }
-.about-sprite {
+.about-pet {
   width: 100%;
-  max-width: 190px;
+  max-width: 170px;
   height: auto;
 }
 @media (max-width: 760px) {
   .about-hero-row { grid-template-columns: 1fr; }
-  .about-sprite-col { display: none; }
+  .about-pet-col { display: none; }
 }
 
 .about-columns {
