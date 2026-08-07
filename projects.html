@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects — Luul Shire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand">LUUL<span class="heart">♥</span>SHIRE</a>
+    <nav class="site-nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="skills.html">SKILLS</a>
+      <a href="education.html">EDU</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero wrap">
+    <p class="page-eyebrow px">✦ LEVEL SELECT</p>
+    <h1 class="page-title">Projects</h1>
+    <p class="page-sub">Real data, real models, real charts. Click any chart to zoom in and see it full-size.</p>
+  </section>
+
+  <section class="section wrap">
+    <div class="project-list">
+
+      <!-- STARBUCKS -->
+      <article class="project" data-reveal id="project-starbucks">
+        <div class="project-head">
+          <div>
+            <span class="project-tag px">PREDICTIVE MODELING</span>
+            <h2 class="project-title px">Optimizing Starbucks Rewards Through Customer Behavior Analytics</h2>
+            <p class="project-org">MKTG 652 — Customer Analytics · Team of 5</p>
+          </div>
+        </div>
+        <p class="project-desc">
+          Analyzed 14,825 Starbucks Rewards members to close a 26.6-point gap between offer views (75.3%) and offer completions (48.7%), then built models to target promotions at the customers most likely to convert.
+        </p>
+        <div class="project-gallery gallery-2">
+          <button class="gallery-item" data-full="starbucks_completion_rate.jpg" data-caption="Average spend climbs sharply with offer completion rate">
+            <img src="starbucks_completion_rate.jpg" alt="Bar chart of average spend by offer completion tier" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="starbucks_kmeans.jpg" data-caption="K-Means customer segmentation, 4 behavioral segments">
+            <img src="starbucks_kmeans.jpg" alt="K-Means clustering chart showing 4 Starbucks customer segments" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="starbucks_logreg.jpg" data-caption="Logistic regression coefficients, reward history is the strongest predictor">
+            <img src="starbucks_logreg.jpg" alt="Logistic regression coefficient chart" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="starbucks_revenue.jpg" data-caption="Modeled revenue uplift by segment at 35% improvement">
+            <img src="starbucks_revenue.jpg" alt="Bar chart of revenue opportunity by segment" loading="lazy">
+          </button>
+        </div>
+        <ul class="project-points">
+          <li>Built a Logistic Regression classifier reaching <strong>87% accuracy</strong> predicting offer completion</li>
+          <li>Applied K-Means segmentation to group customers by demographic and behavioral engagement patterns</li>
+          <li>Used Multiple Linear Regression to quantify drivers of total spend</li>
+          <li>Modeled a <strong>$607,220 revenue uplift</strong> from segment-targeted promotions at a 35% improvement rate</li>
+        </ul>
+        <div class="project-stack">
+          <span class="chip px">PYTHON</span>
+          <span class="chip px">LOGISTIC REGRESSION</span>
+          <span class="chip px">K-MEANS</span>
+          <span class="chip px">LINEAR REGRESSION</span>
+        </div>
+      </article>
+
+      <!-- INSTACART -->
+      <article class="project" data-reveal id="project-instacart">
+        <div class="project-head">
+          <div>
+            <span class="project-tag px">CUSTOMER SEGMENTATION</span>
+            <h2 class="project-title px">Improving Customer Retention &amp; Long-Term Value at Instacart</h2>
+            <p class="project-org">MSBA 655 — Retailing Analytics · Individual project</p>
+          </div>
+        </div>
+        <p class="project-desc">
+          Independently analyzed the Instacart Market Basket dataset, over 3 million orders from 200,000+ customers, to identify what separates one-time shoppers from habitual, high-value ones.
+        </p>
+        <div class="project-gallery gallery-3">
+          <button class="gallery-item" data-full="instacart_retention.jpg" data-caption="Customer retention curve, sharpest drop-off before order 10">
+            <img src="instacart_retention.jpg" alt="Line chart of customer retention by order milestone" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="instacart_reorder.jpg" data-caption="Reorder rate by product department">
+            <img src="instacart_reorder.jpg" alt="Bar chart of reorder rate by department" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="instacart_heatmap.jpg" data-caption="Order volume heatmap, Sunday and Monday mornings peak">
+            <img src="instacart_heatmap.jpg" alt="Heatmap of order volume by day and hour" loading="lazy">
+          </button>
+        </div>
+        <ul class="project-points">
+          <li>Ran exploratory analysis on order lifecycle, reorder cycles, and basket composition</li>
+          <li>Built a CART model to predict staple/repeat purchases from basket characteristics</li>
+          <li>Applied K-Means clustering to segment customers into distinct shopping-behavior groups</li>
+          <li>Identified the 10-15 order mark as the key retention inflection point and translated it into a milestone-based engagement strategy</li>
+        </ul>
+        <div class="project-stack">
+          <span class="chip px">PYTHON</span>
+          <span class="chip px">CART / DECISION TREES</span>
+          <span class="chip px">K-MEANS</span>
+          <span class="chip px">EDA</span>
+        </div>
+      </article>
+
+      <!-- TECH LAYOFFS -->
+      <article class="project" data-reveal id="project-layoffs">
+        <div class="project-head">
+          <div>
+            <span class="project-tag px">DATA VISUALIZATION</span>
+            <h2 class="project-title px">Tech Layoffs 2026: Volume, Intensity &amp; the AI Effect</h2>
+            <p class="project-org">MSBA 625 — Exploratory Data Analysis &amp; Visualization</p>
+          </div>
+        </div>
+        <p class="project-desc">
+          Built an interactive Tableau exploration of 101,146 tracked tech-industry job cuts to test whether AI infrastructure spend was actually driving layoffs, or just a convenient headline.
+        </p>
+        <div class="project-gallery gallery-3">
+          <button class="gallery-item" data-full="layoffs_companies.jpg" data-caption="Three companies account for about 62% of all cuts">
+            <img src="layoffs_companies.jpg" alt="Bar chart ranking companies by jobs cut" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="layoffs_ai_correlation.jpg" data-caption="Layoffs accelerate sharply past $20B in AI investment">
+            <img src="layoffs_ai_correlation.jpg" alt="Scatter plot of layoffs vs AI investment" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="layoffs_map.jpg" data-caption="Layoffs concentrated in two global hubs">
+            <img src="layoffs_map.jpg" alt="World map showing layoff concentration" loading="lazy">
+          </button>
+        </div>
+        <ul class="project-points">
+          <li>Found layoffs are highly concentrated: 3 companies account for ~62% of all cuts in the dataset</li>
+          <li>Surfaced a non-linear relationship, layoffs stay flat below ~$20B in AI investment, then rise sharply past that threshold</li>
+          <li>Mapped eliminated roles (QA, support, ops) against created roles (AI/ML engineering, AI infrastructure)</li>
+        </ul>
+        <div class="project-stack">
+          <span class="chip px">TABLEAU</span>
+          <span class="chip px">EDA</span>
+          <span class="chip px">DATA STORYTELLING</span>
+        </div>
+      </article>
+
+      <!-- COVID -->
+      <article class="project" data-reveal id="project-covid">
+        <div class="project-head">
+          <div>
+            <span class="project-tag px">PUBLIC HEALTH ANALYTICS</span>
+            <h2 class="project-title px">COVID-19 State-Level Vaccination &amp; Mortality Analysis</h2>
+            <p class="project-org">MSBA 625 — Exploratory Data Analysis &amp; Visualization · Team of 6</p>
+          </div>
+        </div>
+        <p class="project-desc">
+          Used CDC longitudinal data (Dec 2020 to Jan 2022) to track how case growth, mortality, and vaccination coverage diverged across states through the Omicron surge.
+        </p>
+        <div class="mini-viz">
+          <p class="mini-viz-title px">TOP STATES BY DAILY CASE SURGE — OMICRON PEAK</p>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">California</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:100%"></div></div>
+            <span class="mini-bar-value px">109K</span>
+          </div>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">Michigan</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:90%"></div></div>
+            <span class="mini-bar-value px">98K</span>
+          </div>
+          <p class="mini-viz-foot">National peak: <strong>943,113</strong> daily cases · <strong>3,619</strong> daily deaths · states above a <strong>70%</strong> vaccination threshold held consistently lower mortality</p>
+        </div>
+        <ul class="project-points">
+          <li>Built a stability scatter plot showing states above a 70% vaccination threshold consistently held lower daily death counts</li>
+          <li>Designed a dual-encoding vulnerability map exposing gaps between vaccine distribution and actual administration</li>
+          <li>Created a risk-priority matrix flagging states with high case growth and low booster coverage for targeted outreach</li>
+        </ul>
+        <div class="project-stack">
+          <span class="chip px">TABLEAU</span>
+          <span class="chip px">CDC DATA</span>
+          <span class="chip px">GEOSPATIAL VIZ</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p>© <span id="year"></span> LUUL SHIRE — ALL SYSTEMS GO</p></div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">X CLOSE</button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

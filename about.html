@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About — Luul Shire</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<noscript><style>[data-reveal]{opacity:1!important;transform:none!important;}</style></noscript>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a href="index.html" class="brand">LUUL<span class="heart">♥</span>SHIRE</a>
+    <nav class="site-nav">
+      <a href="index.html">HOME</a>
+      <a href="about.html">ABOUT</a>
+      <a href="projects.html">PROJECTS</a>
+      <a href="skills.html">SKILLS</a>
+      <a href="education.html">EDU</a>
+      <a href="contact.html">CONTACT</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero wrap">
+    <p class="page-eyebrow px">✦ PLAYER PROFILE</p>
+    <h1 class="page-title">About Me</h1>
+    <p class="page-sub">The non-spreadsheet version of me.</p>
+  </section>
+
+  <section class="section wrap">
+    <p class="about-bio" data-reveal>
+      Hi, I'm Luul! By day I'm knee deep in data, building models, cleaning messy datasets, and figuring out what the numbers are actually trying to tell us. I love the moment when a pile of confusing data finally clicks into a clear story, especially when that story can help a real business make a better decision.
+    </p>
+    <p class="about-bio" data-reveal>
+      Outside of work and school, I'm usually being creative in some other way. Photography is a big one for me. I love wandering around with my camera looking for small details most people walk right past, a flower catching the light just right, or a building I've never noticed before. I also love making drinks. Not in a bartending sense, more in a "how many layers and textures can I fit in one mason jar" sense. There's something satisfying about building a drink the same way I build a model: layer by layer, with a lot of small decisions that add up to something good.
+    </p>
+    <p class="about-bio" data-reveal>
+      If I had to sum myself up, I'd say I'm someone who likes taking things apart to understand how they work, whether that's a dataset, a recipe, or a photo composition, and then putting it back together a little better than I found it.
+    </p>
+
+    <div class="about-grid">
+      <div class="about-block" data-reveal>
+        <h3 class="px">📸 PHOTOGRAPHY</h3>
+        <p>I'm drawn to close-up, detail-heavy shots, flowers, textures, light. Also collect photos from wherever I travel, Paris included.</p>
+      </div>
+      <div class="about-block" data-reveal>
+        <h3 class="px">🍹 DRINK MAKING</h3>
+        <p>Layered mason-jar drinks are my current obsession. Equal parts flavor experiment and visual design project.</p>
+      </div>
+    </div>
+
+    <div class="photo-grid">
+      <button class="photo-frame" data-reveal data-full="about_roses.jpg" data-caption="Pink roses, close up">
+        <img src="about_roses.jpg" alt="Two close-up photos of pink roses" loading="lazy">
+        <figcaption>ROSES</figcaption>
+      </button>
+      <button class="photo-frame" data-reveal data-full="about_lily.jpg" data-caption="Orange lily in bloom">
+        <img src="about_lily.jpg" alt="Close-up photo of an orange and yellow lily" loading="lazy">
+        <figcaption>LILY</figcaption>
+      </button>
+      <button class="photo-frame" data-reveal data-full="about_paris_tower.jpg" data-caption="Eiffel Tower, Paris">
+        <img src="about_paris_tower.jpg" alt="Eiffel Tower photographed from below through tree branches" loading="lazy">
+        <figcaption>PARIS I</figcaption>
+      </button>
+      <button class="photo-frame" data-reveal data-full="about_paris_street.jpg" data-caption="Street corner in Paris">
+        <img src="about_paris_street.jpg" alt="Ornate Parisian building on a street corner" loading="lazy">
+        <figcaption>PARIS II</figcaption>
+      </button>
+      <button class="photo-frame" data-reveal data-full="about_drink_minicookies.jpg" data-caption="Layered mason jar drink topped with mini cookies">
+        <img src="about_drink_minicookies.jpg" alt="Layered mason jar drink topped with mini cookies" loading="lazy">
+        <figcaption>COOKIE JAR</figcaption>
+      </button>
+      <button class="photo-frame" data-reveal data-full="about_drink_cocoa.jpg" data-caption="Mason jar drink dusted with cocoa and a ladyfinger">
+        <img src="about_drink_cocoa.jpg" alt="Mason jar drink topped with cocoa powder and a ladyfinger cookie" loading="lazy">
+        <figcaption>COCOA JAR</figcaption>
+      </button>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap"><p>© <span id="year"></span> LUUL SHIRE — ALL SYSTEMS GO</p></div>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose">X CLOSE</button>
+  <figure class="lightbox-figure">
+    <img id="lightboxImg" src="" alt="">
+    <figcaption id="lightboxCaption"></figcaption>
+  </figure>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
