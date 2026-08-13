@@ -36,6 +36,61 @@
   <section class="section wrap">
     <div class="project-list">
 
+      <!-- WEEKND MOOD PREDICTOR -->
+      <article class="project" data-reveal id="project-weeknd">
+        <div class="project-head">
+          <div>
+            <span class="project-tag px">AI / ML ENGINEERING</span>
+            <h2 class="project-title px">The Weeknd Mood Predictor — Predicting Spotify's Deprecated Audio Features from Raw Sound</h2>
+            <p class="project-org">Independent ML project · Python, librosa, scikit-learn, Streamlit</p>
+          </div>
+          <div class="project-links">
+            <a href="https://theweeknd-mood-predictor-ls.streamlit.app/#you-aint-xo" target="_blank" rel="noopener" class="pxbtn small">🚀 LIVE APP</a>
+            <a href="https://github.com/LuulShire/Theweeknd-mood-predictor" target="_blank" rel="noopener" class="pxbtn small alt">💻 VIEW CODE</a>
+          </div>
+        </div>
+        <p class="project-desc">
+          Built a full ML pipeline to predict Spotify-style valence/energy scores directly from audio, after Spotify deprecated the API that used to provide these values (Nov 2024, no replacement).
+        </p>
+        <div class="project-gallery gallery-2">
+          <button class="gallery-item" data-full="weeknd_shap_energy.png" data-caption="SHAP summary for energy — clean, consistent feature impact, mfcc_1 and zero-crossing rate separate high/low predictions clearly">
+            <img src="weeknd_shap_energy.png" alt="SHAP summary plot for the energy model showing feature impact" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="weeknd_shap_valence.png" data-caption="SHAP summary for valence — noisier, less consistent feature impact across the board">
+            <img src="weeknd_shap_valence.png" alt="SHAP summary plot for the valence model showing feature impact" loading="lazy">
+          </button>
+        </div>
+        <div class="mini-viz">
+          <p class="mini-viz-title px">HELD-OUT R² — ENERGY VS. VALENCE</p>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">Energy</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:100%"></div></div>
+            <span class="mini-bar-value px">0.203</span>
+          </div>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">Valence</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:4%"></div></div>
+            <span class="mini-bar-value px">0.009</span>
+          </div>
+          <p class="mini-viz-foot">Energy showed a real, validated signal. Valence performed no better than guessing the average — consistent with published MIR research showing arousal is far easier to predict from audio than emotional valence.</p>
+        </div>
+        <ul class="project-points">
+          <li>Engineered 22 audio features per track (tempo, spectral shape, harmonic/percussive decomposition, key correlation, 13 MFCCs) using <code>librosa</code> on 30-second preview clips, fully automated, no manual labeling</li>
+          <li>Trained on 99 tracks across The Weeknd's catalog (8 albums), evaluated on a 17-track fully held-out test set (After Hours deluxe) never seen during training or model selection</li>
+          <li>Compared 3 model families (Linear Regression, Random Forest, Gradient Boosting) via 5-fold cross-validation, selected per-target on CV performance, with final scores reported only on the untouched held-out set, zero data leakage</li>
+          <li>Diagnosed why valence underperformed using SHAP analysis: clean, consistent signal for energy vs. noisy, inconsistent contributions for valence, confirming the audio signal itself was the bottleneck, not the modeling approach</li>
+          <li>Tested a fix: added lyric sentiment (VADER via Genius API, 116 tracks) as an extra valence feature. Diagnosed that VADER saturates near ±1.0 on ~90% of tracks, too coarse to help, and documented transformer-based sentiment as the evidence-backed next step</li>
+          <li>Shipped as a live, deployed Streamlit app with real-time iTunes lookup, on-the-fly feature extraction, model inference, and per-album color theming pulled from actual cover art</li>
+        </ul>
+        <div class="project-stack">
+          <span class="chip px">PYTHON</span>
+          <span class="chip px">LIBROSA</span>
+          <span class="chip px">SCIKIT-LEARN</span>
+          <span class="chip px">SHAP</span>
+          <span class="chip px">STREAMLIT</span>
+        </div>
+      </article>
+
       <!-- STARBUCKS -->
       <article class="project" data-reveal id="project-starbucks">
         <div class="project-head">
