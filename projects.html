@@ -36,6 +36,69 @@
   <section class="section wrap">
     <div class="project-list">
 
+      <!-- GAO DEFENSE COST & SCHEDULE ANALYSIS -->
+      <article class="project" data-reveal id="project-gao">
+        <div class="project-head">
+          <div>
+            <span class="project-tag px">POLICY / QUANTITATIVE ANALYSIS</span>
+            <h2 class="project-title px">Systematic Underestimation in Defense Cost and Schedule Estimates</h2>
+            <p class="project-org">Independent Analysis · Python, pandas, NumPy, Matplotlib</p>
+          </div>
+          <div class="project-links">
+            <a href="gao_defense_report.pdf" target="_blank" rel="noopener" class="pxbtn small">📄 READ REPORT</a>
+            <a href="gao_defense_slides.pdf" target="_blank" rel="noopener" class="pxbtn small alt">📊 VIEW SLIDES</a>
+          </div>
+        </div>
+        <p class="project-desc">
+          Analyzed 31 major defense acquisition programs from GAO's 2024 and 2025 Weapon Systems Annual Assessments to test whether DoD's early cost and schedule estimates miss in a predictable direction, and by how much a decision-maker should adjust for it.
+        </p>
+        <div class="project-gallery gallery-3">
+          <button class="gallery-item" data-full="gao_schedule_slips.png" data-caption="20 of 22 programs with schedule data slipped, 2 held on time, none finished early">
+            <img src="gao_schedule_slips.png" alt="Bar chart of change in time to initial capability by program, showing 20 of 22 programs slipped" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="gao_reference_class.png" data-caption="Empirical distribution of schedule outcomes: 1.4x for 50% confidence, 1.9x for 80%">
+            <img src="gao_reference_class.png" alt="Step chart showing share of programs finishing within a given multiple of their first schedule estimate" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="gao_sentinel.png" data-caption="Sentinel ICBM: $94.1B first estimate vs. $170.6B independent CAPE estimate">
+            <img src="gao_sentinel.png" alt="Bar chart comparing Sentinel's first estimate, current program estimate, and independent CAPE estimate" loading="lazy">
+          </button>
+        </div>
+        <div class="mini-viz">
+          <p class="mini-viz-title px">WHERE DOD SAYS COST GROWTH COMES FROM</p>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">Quantity</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:100%"></div></div>
+            <span class="mini-bar-value px">+$123.4B</span>
+          </div>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">Engineering</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:64%"></div></div>
+            <span class="mini-bar-value px">+$78.8B</span>
+          </div>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">Schedule</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:13%"></div></div>
+            <span class="mini-bar-value px">+$15.7B</span>
+          </div>
+          <p class="mini-viz-foot">The "Estimating" category, corrections to the estimate itself, was <strong>net negative (-$38.2B)</strong>. Cost growth isn't simply "bad math" — but schedule, which is less distorted by quantity changes, still shows the clearest one-directional pattern.</p>
+        </div>
+        <ul class="project-points">
+          <li>Of 22 programs with schedule data, <strong>20 slipped, 2 held steady, and none finished early</strong> — a one-directional pattern a sign test puts at about 1-in-a-million odds of being chance (p ≈ 0.000001)</li>
+          <li>Found schedule growth appears to precede cost growth: programs first estimated in 2016 or earlier show +51% schedule growth and +27% unit cost growth, while newer programs (2017+) have already slipped +29% on schedule despite unit costs still near flat (-1%)</li>
+          <li>Built an empirical reference class from these programs' actual outcomes: a new schedule estimate needs about <strong>1.4x</strong> the original plan for 50% confidence of holding, and about <strong>1.9x</strong> for 80% confidence, validated with a 20,000-iteration bootstrap</li>
+          <li>Case study: the Sentinel ICBM's first estimate was $94.1B; its own 2024 estimate rose to $129.0B (+37%) after a critical cost breach, while DoD's independent CAPE office priced the modified program at $170.6B (+81%) — a $41.6B gap between the inside and outside view</li>
+          <li>Cross-checked against DoD's own Selected Acquisition Report data to rule out "estimates are just bad at math": cost growth is attributed mostly to quantity and engineering changes, not estimating error</li>
+          <li>Recommended reporting schedule estimates as confidence ranges (50%/80%) rather than single dates, anchoring new estimates to reference-class history, and treating early schedule slips as a leading indicator for cost growth still to come</li>
+        </ul>
+        <div class="project-stack">
+          <span class="chip px">PYTHON</span>
+          <span class="chip px">PANDAS</span>
+          <span class="chip px">NUMPY</span>
+          <span class="chip px">MATPLOTLIB</span>
+          <span class="chip px">BOOTSTRAP RESAMPLING</span>
+        </div>
+      </article>
+
       <!-- WEEKND MOOD PREDICTOR -->
       <article class="project" data-reveal id="project-weeknd">
         <div class="project-head">
