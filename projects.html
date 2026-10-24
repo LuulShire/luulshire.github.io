@@ -30,11 +30,74 @@
   <section class="page-hero wrap">
     <p class="page-eyebrow px">✦ LEVEL SELECT</p>
     <h1 class="page-title">Projects</h1>
-    <p class="page-sub">Real data, real models, real charts. Click any chart to zoom in and see it full-size.</p>
+    <p class="page-sub">Real data, real models, real charts, across whatever field had a problem worth solving. I’d rather level up a new skill than replay the same one. Click any chart to zoom in and see it full-size.</p>
   </section>
 
   <section class="section wrap">
     <div class="project-list">
+
+      <!-- GAO DEFENSE COST & SCHEDULE ANALYSIS -->
+      <article class="project" data-reveal id="project-gao">
+        <div class="project-head">
+          <div>
+            <span class="project-tag px">POLICY / QUANTITATIVE ANALYSIS</span>
+            <h2 class="project-title px">Systematic Underestimation in Defense Cost and Schedule Estimates</h2>
+            <p class="project-org">Independent Analysis</p>
+          </div>
+          <div class="project-links">
+            <a href="gao_defense_report.pdf" target="_blank" rel="noopener" class="pxbtn small">📄 READ REPORT</a>
+            <a href="gao_defense_slides.pdf" target="_blank" rel="noopener" class="pxbtn small alt">📊 VIEW SLIDES</a>
+          </div>
+        </div>
+        <p class="project-desc">
+          Analyzed 31 major defense acquisition programs from GAO's 2024 and 2025 Weapon Systems Annual Assessments to test whether DoD's early cost and schedule estimates miss in a predictable direction, and by how much a decision-maker should adjust for it.
+        </p>
+        <div class="project-gallery gallery-3">
+          <button class="gallery-item" data-full="gao_schedule_slips.png" data-caption="20 of 22 programs with schedule data slipped, 2 held on time, none finished early">
+            <img src="gao_schedule_slips.png" alt="Bar chart of change in time to initial capability by program, showing 20 of 22 programs slipped" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="gao_reference_class.png" data-caption="Empirical distribution of schedule outcomes: 1.4x for 50% confidence, 1.9x for 80%">
+            <img src="gao_reference_class.png" alt="Step chart showing share of programs finishing within a given multiple of their first schedule estimate" loading="lazy">
+          </button>
+          <button class="gallery-item" data-full="gao_sentinel.png" data-caption="Sentinel ICBM: $94.1B first estimate vs. $170.6B independent CAPE estimate">
+            <img src="gao_sentinel.png" alt="Bar chart comparing Sentinel's first estimate, current program estimate, and independent CAPE estimate" loading="lazy">
+          </button>
+        </div>
+        <div class="mini-viz">
+          <p class="mini-viz-title px">WHERE DOD SAYS COST GROWTH COMES FROM</p>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">Quantity</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:100%"></div></div>
+            <span class="mini-bar-value px">+$123.4B</span>
+          </div>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">Engineering</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:64%"></div></div>
+            <span class="mini-bar-value px">+$78.8B</span>
+          </div>
+          <div class="mini-bar-row">
+            <span class="mini-bar-label">Schedule</span>
+            <div class="mini-bar-track"><div class="mini-bar-fill" style="width:13%"></div></div>
+            <span class="mini-bar-value px">+$15.7B</span>
+          </div>
+          <p class="mini-viz-foot">The "Estimating" category, corrections to the estimate itself, was <strong>net negative (-$38.2B)</strong>. Cost growth isn't simply "bad math" — but schedule, which is less distorted by quantity changes, still shows the clearest one-directional pattern.</p>
+        </div>
+        <ul class="project-points">
+          <li>Of 22 programs with schedule data, <strong>20 slipped, 2 held steady, and none finished early</strong> — a one-directional pattern a sign test puts at about 1-in-a-million odds of being chance (p ≈ 0.000001)</li>
+          <li>Found schedule growth appears to precede cost growth: programs first estimated in 2016 or earlier show +51% schedule growth and +27% unit cost growth, while newer programs (2017+) have already slipped +29% on schedule despite unit costs still near flat (-1%)</li>
+          <li>Built an empirical reference class from these programs' actual outcomes: a new schedule estimate needs about <strong>1.4x</strong> the original plan for 50% confidence of holding, and about <strong>1.9x</strong> for 80% confidence, validated with a 20,000-iteration bootstrap</li>
+          <li>Case study: the Sentinel ICBM's first estimate was $94.1B; its own 2024 estimate rose to $129.0B (+37%) after a critical cost breach, while DoD's independent CAPE office priced the modified program at $170.6B (+81%) — a $41.6B gap between the inside and outside view</li>
+          <li>Cross-checked against DoD's own Selected Acquisition Report data to rule out "estimates are just bad at math": cost growth is attributed mostly to quantity and engineering changes, not estimating error</li>
+          <li>Recommended reporting schedule estimates as confidence ranges (50%/80%) rather than single dates, anchoring new estimates to reference-class history, and treating early schedule slips as a leading indicator for cost growth still to come</li>
+        </ul>
+        <div class="project-stack">
+          <span class="chip px">PYTHON</span>
+          <span class="chip px">PANDAS</span>
+          <span class="chip px">NUMPY</span>
+          <span class="chip px">MATPLOTLIB</span>
+          <span class="chip px">BOOTSTRAP RESAMPLING</span>
+        </div>
+      </article>
 
       <!-- WEEKND MOOD PREDICTOR -->
       <article class="project" data-reveal id="project-weeknd">
@@ -42,7 +105,7 @@
           <div>
             <span class="project-tag px">AI / ML ENGINEERING</span>
             <h2 class="project-title px">The Weeknd Mood Predictor — Predicting Spotify's Deprecated Audio Features from Raw Sound</h2>
-            <p class="project-org">Independent ML project · Python, librosa, scikit-learn, Streamlit</p>
+            <p class="project-org">Independent ML Project </p>
           </div>
           <div class="project-links">
             <a href="https://theweeknd-mood-predictor-ls.streamlit.app/#you-aint-xo" target="_blank" rel="noopener" class="pxbtn small">🚀 LIVE APP</a>
@@ -75,12 +138,12 @@
           <p class="mini-viz-foot">Energy showed a real, validated signal. Valence performed no better than guessing the average — consistent with published MIR research showing arousal is far easier to predict from audio than emotional valence.</p>
         </div>
         <ul class="project-points">
-          <li>Engineered 22 audio features per track (tempo, spectral shape, harmonic/percussive decomposition, key correlation, 13 MFCCs) using <code>librosa</code> on 30-second preview clips, fully automated, no manual labeling</li>
-          <li>Trained on 99 tracks across The Weeknd's catalog (8 albums), evaluated on a 17-track fully held-out test set (After Hours deluxe) never seen during training or model selection</li>
-          <li>Compared 3 model families (Linear Regression, Random Forest, Gradient Boosting) via 5-fold cross-validation, selected per-target on CV performance, with final scores reported only on the untouched held-out set, zero data leakage</li>
+          <li>Engineered <strong>22 audio features per track</strong> (tempo, spectral shape, harmonic/percussive decomposition, key correlation, 13 MFCCs) using <code>librosa</code> on 30-second preview clips, fully automated, no manual labeling</li>
+          <li>Trained on <strong>99 tracks</strong> across The Weeknd's catalog (8 albums), evaluated on a <strong>17-track held-out test set</strong> (After Hours deluxe) never seen during training or model selection</li>
+          <li>Compared 3 model families (Linear Regression, Random Forest, Gradient Boosting) via 5-fold cross-validation, selected per-target on CV performance, with final scores reported only on the untouched held-out set — <strong>zero data leakage</strong></li>
           <li>Diagnosed why valence underperformed using SHAP analysis: clean, consistent signal for energy vs. noisy, inconsistent contributions for valence, confirming the audio signal itself was the bottleneck, not the modeling approach</li>
-          <li>Tested a fix: added lyric sentiment (VADER via Genius API, 116 tracks) as an extra valence feature. Diagnosed that VADER saturates near ±1.0 on ~90% of tracks, too coarse to help, and documented transformer-based sentiment as the evidence-backed next step</li>
-          <li>Shipped as a live, deployed Streamlit app with real-time iTunes lookup, on-the-fly feature extraction, model inference, and per-album color theming pulled from actual cover art</li>
+          <li>Tested a fix: added lyric sentiment (VADER via Genius API, 116 tracks) as an extra valence feature. Diagnosed that VADER saturates near ±1.0 on <strong>~90% of tracks</strong>, too coarse to help, and documented transformer-based sentiment as the evidence-backed next step</li>
+          <li>Shipped as a live, deployed <strong>Streamlit app</strong> with real-time iTunes lookup, on-the-fly feature extraction, model inference, and per-album color theming pulled from actual cover art</li>
         </ul>
         <div class="project-stack">
           <span class="chip px">PYTHON</span>
@@ -97,7 +160,7 @@
           <div>
             <span class="project-tag px">PREDICTIVE MODELING</span>
             <h2 class="project-title px">Optimizing Starbucks Rewards Through Customer Behavior Analytics</h2>
-            <p class="project-org">MKTG 652 — Customer Analytics · Team of 5</p>
+            <p class="project-org">MKTG 652 — Customer Analytics</p>
           </div>
         </div>
         <p class="project-desc">
@@ -124,7 +187,7 @@
           <li>Modeled a <strong>$607,220 revenue uplift</strong> from segment-targeted promotions at a 35% improvement rate</li>
         </ul>
         <div class="project-stack">
-          <span class="chip px">PYTHON</span>
+          <span class="chip px">R</span>
           <span class="chip px">LOGISTIC REGRESSION</span>
           <span class="chip px">K-MEANS</span>
           <span class="chip px">LINEAR REGRESSION</span>
@@ -213,7 +276,10 @@
           <div>
             <span class="project-tag px">PUBLIC HEALTH ANALYTICS</span>
             <h2 class="project-title px">COVID-19 State-Level Vaccination &amp; Mortality Analysis</h2>
-            <p class="project-org">MSBA 625 — Exploratory Data Analysis &amp; Visualization · Team of 6</p>
+            <p class="project-org">MSBA 625 — Exploratory Data Analysis &amp; Visualization</p>
+          </div>
+          <div class="project-links">
+            <a href="covid_report.pdf" target="_blank" rel="noopener" class="pxbtn small">📄 READ REPORT</a>
           </div>
         </div>
         <p class="project-desc">
@@ -234,9 +300,11 @@
           <p class="mini-viz-foot">National peak: <strong>943,113</strong> daily cases · <strong>3,619</strong> daily deaths · states above a <strong>70%</strong> vaccination threshold held consistently lower mortality</p>
         </div>
         <ul class="project-points">
-          <li>Built a stability scatter plot showing states above a 70% vaccination threshold consistently held lower daily death counts</li>
-          <li>Designed a dual-encoding vulnerability map exposing gaps between vaccine distribution and actual administration</li>
-          <li>Created a risk-priority matrix flagging states with high case growth and low booster coverage for targeted outreach</li>
+          <li>Analyzed 61 million administered vaccinations against daily mortality: a stability scatter plot showed states above a 70% vaccination threshold consistently held lower daily death counts even as Omicron cases surged, decoupling infection from mortality</li>
+          <li>Built a dual-encoding vulnerability map exposing states where vaccine supply was reaching the state but not translating into administered doses, pointing to a distribution and outreach failure rather than a supply shortage</li>
+          <li>Created a risk-priority matrix flagging states like New Jersey and Rhode Island as critically vulnerable, high daily case growth paired with booster coverage below the 50% priority threshold</li>
+          <li>Mapped the US Case Heat Map and Top 10 States by Case Surge to show California and Michigan bearing the heaviest burden (109K and 98K new daily cases) at the national Omicron peak of 943,113 daily cases and 3,619 daily deaths</li>
+          <li>Recommended treating booster campaigns with the same urgency as initial rollouts and monitoring case rates alongside vaccination coverage in real time so at-risk states can be flagged before mortality rises</li>
         </ul>
         <div class="project-stack">
           <span class="chip px">TABLEAU</span>
