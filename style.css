@@ -291,26 +291,31 @@ body::before {
 }
 
 .about-hero-row {
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
-  gap: 24px;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  gap: 32px;
   margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+.about-bio-col {
+  flex: 1 1 520px;
 }
 .about-pet-col {
+  flex: 0 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
+  max-width: 460px;
 }
 .about-pet {
   width: 100%;
-  max-width: 380px;
+  max-width: 460px;
   height: auto;
 }
-@media (max-width: 760px) {
-  .about-hero-row { grid-template-columns: 1fr; }
-  .about-pet-col { padding-top: 0; }
-  .about-pet { max-width: 280px; margin: 0 auto; }
+@media (max-width: 920px) {
+  .about-pet-col { max-width: 340px; margin: 0 auto; }
 }
 
 .about-columns {
