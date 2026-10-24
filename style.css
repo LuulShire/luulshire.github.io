@@ -304,12 +304,13 @@ body::before {
 }
 .about-pet {
   width: 100%;
-  max-width: 170px;
+  max-width: 250px;
   height: auto;
 }
 @media (max-width: 760px) {
   .about-hero-row { grid-template-columns: 1fr; }
-  .about-pet-col { display: none; }
+  .about-pet-col { padding-top: 0; }
+  .about-pet { max-width: 210px; margin: 0 auto; }
 }
 
 .about-columns {
