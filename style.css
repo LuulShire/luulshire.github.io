@@ -477,6 +477,9 @@ body::before {
 .skill-group-title { font-family: var(--font-pixel); font-size: 11px; margin: 0 0 12px; }
 .skill-group p { margin: 0; font-size: 17px; }
 .skill-group p strong { color: var(--pink-deep); }
+.skill-group ul { margin: 0; padding-left: 20px; font-size: 16.5px; }
+.skill-group li { margin-bottom: 7px; }
+.skill-group li strong { color: var(--pink-deep); }
 
 .cert-list {
   border: 4px solid var(--ink);
